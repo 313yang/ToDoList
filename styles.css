@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap');
 
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     padding: 0;
@@ -12,7 +14,6 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: rgb(241, 203, 77);
 }
 main {
     position: absolute;
@@ -87,6 +88,11 @@ h5 {
 .js-toDoList_do{
    width: 40%; 
 }
+.js-toDoList_not,
+.js-toDoList_do,
+.js-toDoList_fin{
+    margin: 30px 20px;
+}
 input {
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(0, 0, 0, 0);
@@ -104,8 +110,8 @@ input:focus {
     outline: none;
 }
 ul {
-    text-align: start;
-    margin-top: 50px;
+    padding: 0;
+    text-align: left;
 }
 li {
     margin-bottom: 10px;
@@ -138,7 +144,7 @@ button:active    {
  
 }
 .done:hover{
-    background-color: rgb(37, 233, 119);
+    background-color: rgb(64, 201, 51);
 }
 .do:hover{
     background-color: yellow;
@@ -148,5 +154,22 @@ button:active    {
 .js-weather {
     position: fixed;
     left: 0px;
-    bottom: 30px;
+    bottom: 20px;
+    
+}
+
+@media screen and (max-width: 780px) {
+    .todolist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .js-toDoList_not,
+    .js-toDoList_do,
+    .js-toDoList_fin{
+        width: 80%;
+    }
+    .js-toDoList_fin{
+        margin-bottom: 50px;
+    }
 }
